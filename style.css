@@ -1,0 +1,563 @@
+html {
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    color: #0f172a;
+    background-color: #ffffff;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: url("../images/beautiful-women-wearing-hijab (1).jpg") no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.9;
+}
+/*header style*/
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 11%;
+    border-bottom: 1px solid #2C3930;
+    
+
+}
+.logo {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 7px;
+    color:#2C3930;
+
+}
+.nav{
+    display: flex;
+}
+.nav a{
+    position: relative;
+    font-size: 16px;
+    color:#A27B5C;
+    font-weight: 400;
+    
+    margin-right: 30px;
+    transition: all .45 ease;
+
+}
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color:#A27B5C;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.nav a:hover:after {
+    transform: translateY(0px);
+    opacity: 1;
+}
+.nav a.active::after{
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+.icons{
+    display: flex;
+    align-items: center;
+
+}
+.icons i{
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color:#2C3930;
+    font-size: 20px;
+    margin-right: 8px;
+/* margin-left: 4px;*/
+    transition: all .45 ease;
+}
+.icons i:hover{
+    transform: scale(0.9);
+}
+#menu-icon{
+    color:#2C3930;
+    font-size: 33px;
+    z-index: 1001;
+    cursor: pointer;
+    display: none;
+}
+/*home style*/
+section{
+    padding: 100px 11% 90px;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.home {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/beautiful-women-wearing-hijab (1).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 11%;
+}
+.home-txt h4{
+    font-size: 22px;
+    font-weight: 500;
+    color: #2C3930;
+    
+}
+.home-txt h1{
+    font-size: 40px;
+    color: #A27B5C;
+    line-height: 1.2;
+    margin: 25px 0 45px;
+
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 16px 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #3F4F44;
+    transition: all .45s ease;
+}
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    height: 2px;
+    background-color:#3F4F44;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.btn:hover:after {
+    transform: translateY(0px);
+    opacity: 1;
+}
+/*feature style*/
+
+header.sticky{
+    background-color:#c5c0b2;
+    padding: 14px 11%;
+
+}
+
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c5c0b2;
+}
+
+.middle-txt {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.middle-txt h2 {
+    font-size:40px;
+    font-weight: bold;
+    color: #805d45;
+}
+span {
+    color: #3F4F44;
+}
+.feature-content {
+    display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.feature-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.feature-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.row-btn {
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #a27859;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.row-btn:hover {
+    background-color: #805d45;
+}
+/*product style*/
+.product{
+    background-color: #c5c0b2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-content{
+    display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+}
+.product-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+.product-content img:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+.box h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    color: #2C3930;
+}
+.box h4{
+    font-size: 16px;
+    color: #805d45;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.inbox{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.price{
+    display: inline-block;
+    padding: 4px 16px;
+    color:#2C3930;
+    font-size: 15px;
+    font-weight: 600;
+    transform: all .45s ease;
+}
+.price:hover{
+color: #805d45;
+    letter-spacing: 1px;
+}
+.rating a{
+font-size: 19px;
+color: #E9A319;
+margin-right: 4px;
+
+}
+.heart i{
+color: #ac0f24;
+font-size: 22px;
+border-radius: 50%;
+transition: all 0.45s ease;
+}
+.heart i:hover{
+    cursor: pointer;
+    background-color: #ac0f24;
+    color: #c5c0b2;
+}
+/*cta style*/
+.cta-contant{
+    background-color: #c5c0b2;
+
+}
+.cta{
+    background-image: url("../images/background2.jpg");
+    height: 70vh;
+    width: 80vw;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    
+}
+.cta-txt{
+    max-width: 560px;
+margin-left: 480px;
+
+}
+.cta-txt .logo{
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    margin-left: 60px;
+}
+.cta-txt h3{
+    font-size: 3.3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #805d45;
+
+}
+
+.cta-txt p{
+    font-size: 16px;
+    color: #2C3930;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+/*contact style*/
+.contact {
+    padding: 50px 11% 40px;
+    background-color: #c5c0b2;
+    
+}
+
+.main-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+}
+
+
+.contact-content h5 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #3F4F44;
+}
+
+
+
+.contact-content li {
+    margin-bottom: 12px;
+}
+
+.contact-content a {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #805d45;
+    transition: all 0.3s ease;
+}
+
+.contact-content a:hover {
+    color: #3F4F44;
+    transform: translateX(-5px);
+}
+.end-txt{
+    background-color: #c5c0b2;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color:#2C3930
+}
+/*media quiry*/
+
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+    #menu-icon {
+            display: block;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1001;
+        }
+    header {
+        padding: 15px 5%;
+    }
+
+    .nav {
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        background: #c5c0b2;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.4s;
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .nav a {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+
+    section {
+        padding: 60px 5% 40px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    .home-txt h1 {
+        font-size: 30px;
+    }
+
+    .home-txt h4 {
+        font-size: 18px;
+    }
+
+    .feature-content,
+    .product-content,
+    .main-contact {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 20px;
+    }
+
+    .box,
+    .feature-card {
+        margin: auto;
+    }
+
+    .icons i {
+        margin: 0 5px;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 1001;
+    }
+
+    /* Hide nav by default on small screens */
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #c5c0b2;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Show nav when menu is active */
+    .nav.active {
+        display: flex;
+    }
+
+    header {
+        padding: 15px 8%;
+    }
+
+    section {
+        padding: 80px 8%;
+        grid-template-columns: 1fr;
+    }
+
+    .feature-content,
+    .product-content,
+    .main-contact {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .home-txt h1 {
+        font-size: 35px;
+    }
+
+    .home-txt h4 {
+        font-size: 20px;
+    }
+}
+
+/* Large Screens (1024px and up) */
+@media (min-width: 1024px) {
+
+    .feature-content,
+    .product-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .main-contact {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
